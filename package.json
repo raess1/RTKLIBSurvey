@@ -1,0 +1,27 @@
+{
+    "name": "mapper",
+    "title": "server.js",
+    "version": "0.1.0",    
+    "description": "GPS Mapper",    
+    "main": "server.js",
+    "private": false,    
+    "license": "MIT OR GPL-2.0",    
+    "engines": {
+        "node": "*"
+    },    
+    "devDependencies": {
+        "angles": "^0.2.0",
+        "byline": "^5.0.0",
+        "chai": "^4.1.0",
+        "express": "^4.16.4",
+        "mocha": "^5.2.0",
+        "serialport": "^7.1.1",
+        "socket.io": "^2.0.3",
+        "kalman": "0.0.2",
+        "sylvester": "0.0.21",
+        "proj4": "*",
+        "net": "*",
+        "http": "*",
+        "xmlhttprequest": "*"
+    }
+}
