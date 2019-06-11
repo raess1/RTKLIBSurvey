@@ -6,10 +6,14 @@
 
 
 // choose NMEA input stream:
-var useSerial = false;  // true=serial, false=tcp
+var useSerial = true;  // true=serial, false=tcp
 
 // ---- case useSerial=true ------------------
-var serialPort = 'COM16';
+var serialPort = 'COM15';
+// var serialPort = '/dev/cu.usbserial';
+// var serialPort = '/dev/ttyUSB0';
+//var serialPort = '/dev/tty.usbserial';
+//var serialPort = '/dev/tty.usbmodem1411';
 var serialBaud = 9600;
 
 // ---- case useSerial=false  ----------------
@@ -21,10 +25,6 @@ var tcpPort = 8001;
 //geoidModel = 'egm2008-1.pgm';
 geoidModel = 'egm2008-5.pgm';
 
-// var serialPort = '/dev/cu.usbserial';
-// var serialPort = '/dev/ttyUSB0';
-//var serialPort = '/dev/tty.usbserial';
-//var serialPort = '/dev/tty.usbmodem1411';
 
 var millis = 0;
 var app = require('express')();
@@ -128,7 +128,7 @@ gps.on('data', function(data) {
 // some HTTP GET request...
 app.get('/*', function(req, res) {
   console.log('GET ' + req.originalUrl);    
-  if (['/example1.js', '/example2.js'].indexOf(req.originalUrl) >= 0) {
+  if (['/css/style.css', '/survey.js'].indexOf(req.originalUrl) >= 0) {
     res.sendFile(__dirname + req.originalUrl);
   } else res.sendFile(__dirname + '/maps.html');
 });
