@@ -302,7 +302,7 @@
     }
 
     this['events'] = {};
-    this['state'] = {'errors': 0, 'processed': 0};
+    this['state'] = {'errors': 0, 'processed': 0, 'types': {} };
   }
 
   GPS.prototype['events'] = null;
@@ -611,7 +611,7 @@
        8    = Height 1 sigma error, in meters
        9    = Checksum
        */
-
+      
       return {
         'time': parseTime(gst[1]),
         'rms': parseNumber(gst[2]),
@@ -836,6 +836,11 @@
       this['state']['errors']++;
       return false;
     }
+    if (this['state']['types'][parsed.type]===undefined){
+      console.log('GPS: new type '+parsed.type);
+      this['state']['types'][parsed.type]=0;
+    }
+    this['state']['types'][parsed.type]++;
 
     updateState(this['state'], parsed);
 

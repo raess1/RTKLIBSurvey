@@ -143,7 +143,8 @@ parser.on('data', function(data) {
   gpsPackets++;
   if (Date.now() > millis){
     millis = Date.now() + 10000;
-    console.log('GPS data packets:' + gpsPackets);
+    console.log('GPS data packets:' + gpsPackets);    
+    console.log(gps.state.types);
     gpsPackets = 0;
   }
   gps.update(data);
