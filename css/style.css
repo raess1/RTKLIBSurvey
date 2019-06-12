@@ -21,5 +21,9 @@
       width: 65%;                
   }
   select {
-      font-size: calc(70%);
-}
+      font-size: calc(70%);      
+  }
+  th{
+                text-align:right
+  }
+  
