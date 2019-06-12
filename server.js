@@ -9,7 +9,7 @@
 var useSerial = true;  // true=serial, false=tcp
 
 // ---- case useSerial=true ------------------
-var serialPort = 'COM15';
+var serialPort = 'COM19';
 // var serialPort = '/dev/cu.usbserial';
 // var serialPort = '/dev/ttyUSB0';
 //var serialPort = '/dev/tty.usbserial';

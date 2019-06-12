@@ -3,7 +3,7 @@
     <head>
         <title>GPS mapper</title>
         <meta name="viewport" content="initial-scale=1.0">
-        <meta charset="utf-8">
+        <meta charset="utf-8">               
         <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="css/style.css">
     </head>
@@ -23,9 +23,58 @@
         </div>
         
         <div id="map"></div>
+        
+        <h1>Information</h1>
+        <table>
+            <tr>
+                <th>Date</th>
+                <td id="tdate"></td>
+            </tr>
+            <tr>
+                <th>Latitude</th>
+                <td id="tlat"></td>
+            </tr>
+            <tr>
+                <th>Longitude</th>
+                <td id="tlon"></td>
+            </tr>
+            <tr>
+                <th>Altitude</th>
+                <td id="talt"></td>
+            </tr>
+            <tr>
+                <th>Speed</th>
+                <td id="tspeed"></td>
+            </tr>
+            <tr>
+                <th>Status</th>
+                <td id="tstatus"></td>
+            </tr>
+            <tr>
+                <th>PDOP</th>
+                <td id="tpdop"></td>
+            </tr>
+            <tr>
+                <th>VDOP</th>
+                <td id="tvdop"></td>
+            </tr>
+            <tr>
+                <th>HDOP</th>
+                <td id="thdop"></td>
+            </tr>
+            <tr>
+                <th>Satellites in Use</th>
+                <td id="tactive"></td>
+            </tr>
+            <tr>
+                <th>Satellites in View</th>
+                <td id="tview"></td>
+            </tr>
+        </table>        
 
         <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.5.0/proj4-src.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.7.0/d3.js"></script>
         <!-- <script type="text/javascript" src="http://www.google.com/jsapi"></script> -->
         <script src="/socket.io/socket.io.js"></script>        
         <script type="text/javascript" src="survey.js"></script>               
